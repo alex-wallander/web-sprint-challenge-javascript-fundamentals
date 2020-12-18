@@ -56,7 +56,7 @@ const zooAnimals = [
 
   function animalNames(arr, cb){
     let displayNames = arr.forEach(function(cb){
-      return `name: ${cb["animal_name"]}, scientific: ${cb["scientific_name"]}`;
+      return `name: ${cb["animal_name"]}, scientific: ${"scientific_name"}`;
     })
     return displayNames;
   }
@@ -70,8 +70,9 @@ const zooAnimals = [
 
   function lowerCaseNames(arr, cb){
     let lowerCase = arr.map(function(cb){
-      return lowerCase.push.toLowerCase(cb["animal_name"]);
+      return cb["animal_name"].toLowerCase();
     });
+    return lowerCase;
   }
   
   
